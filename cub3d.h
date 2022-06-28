@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oouazize <oouazize@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmounib <mmounib@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 16:20:13 by oouazize          #+#    #+#             */
-/*   Updated: 2022/06/25 20:00:43 by oouazize         ###   ########.fr       */
+/*   Updated: 2022/06/28 14:45:45 by mmounib          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 #define WIN_WIDTH 1440
 #define WIN_HEIGHT 900
-#define BUFFER_SIZE 1032
+// #define BUFFER_SIZE 1032
 #define WALL_SIZE 500
 #define PI 3.141592653589793238
 
@@ -30,6 +30,7 @@ typedef struct t_map
 {
 	char **map;
 	char **map1;
+	int map_length;
 	int north;
 	int west;
 	int east;
@@ -54,6 +55,7 @@ typedef struct t_map
 
 typedef struct t_mathi
 {
+	char playerdir;
 	double distance_plane;
 	int distance_wall;
 	int delta_x;
@@ -116,7 +118,7 @@ int ft_isalpha(char *ch);
 int ft_isascii(char *a);
 int check_comma(t_info *infos, int j, int i);
 int check_char(char **color);
-int checkmap(t_info *infos);
+void checkmap_0(t_info *infos);
 void checkmap1(t_info *infos, int *i);
 void ft_skipspace(t_info *infos, int *j, int i);
 void draw_map1(t_info *infos, int x, int y, int color);
@@ -132,5 +134,10 @@ void draw_rays(t_info *infos);
 void	black_window(t_info **infos);
 void init2(t_info *infos);
 int check_comma1(t_info *infos, int j, int i);
+void check_player(t_info *infos, int flag);
+void	ft_bzero(char *str, size_t n);
+void checkallmap(t_info *infos);
+int ft_strchr1(const char *str, int c);
+void replace_map(t_info *infos, int i);
 
 #endif

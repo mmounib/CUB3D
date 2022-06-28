@@ -1,0 +1,15 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/mmounib/Desktop/cub3d'
+gcc -fsanitize=address -g cub3d.c events.c drawing/draw_init.c utils/ft_strjoin.c utils/ft_substr.c utils/get_next_line.c utils/ft_split.c utils/ft_strncmp.c utils/ft_strtrim.c utils/ft_atoi.c check_comma.c check_map.c  -lmlx -framework OpenGL -framework AppKit -o cub3d
+ 
+echo "\033[1;33m ██████╗██╗   ██╗██████╗ ██████╗ ██████╗ "
+echo "\033[1;33m██╔════╝██║   ██║██╔══██╗╚════██╗██╔══██╗"
+echo "\033[1;33m██║     ██║   ██║██████╔╝ █████╔╝██║  ██║"
+echo "\033[1;33m██║     ██║   ██║██╔══██╗ ╚═══██╗██║  ██║"
+echo "\033[1;33m╚██████╗╚██████╔╝██████╔╝██████╔╝██████╔╝"
+echo "\033[1;33m ╚═════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚═════╝ "
+echo "\033[1;33m "
+echo " "
+echo "\033[1;35m▐▌ DONE ▐▌"
+make: Leaving directory `/Users/mmounib/Desktop/cub3d'
+ 

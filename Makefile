@@ -1,11 +1,20 @@
 NAME    =    cub3d
 
-SRCS    =	cub3d.c events.c drawing/draw_init.c \
+SRCS    =	cub3d.c \
+			events.c \
+			drawing/draw_init.c \
 			utils/ft_strjoin.c utils/ft_substr.c \
-			utils/get_next_line.c utils/ft_split.c utils/ft_strncmp.c \
-			utils/ft_strtrim.c utils/ft_atoi.c check_comma.c check_map.c \
+			utils/get_next_line.c \
+			utils/ft_split.c \
+			utils/ft_strncmp.c \
+			utils/ft_strtrim.c \
+			utils/ft_atoi.c \
+			check_comma.c \
+			check_map.c \
+			replace_map.c \
+			player_error.c \
 
-GCC        =    gcc -Werror -Wextra -Wall -fsanitize=address -g
+GCC        =    gcc -fsanitize=address -g
 
 FLAGS =	-lmlx -framework OpenGL -framework AppKit
 

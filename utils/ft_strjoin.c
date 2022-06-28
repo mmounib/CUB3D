@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oouazize <oouazize@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmounib <mmounib@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 16:20:53 by oouazize          #+#    #+#             */
-/*   Updated: 2022/06/24 11:09:58 by oouazize         ###   ########.fr       */
+/*   Updated: 2022/06/27 11:15:17 by mmounib          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		string[i++] = s2[j++];
 	string[i] = '\0';
 	return (string);
-}
-
-void	black_window(t_info **infos)
-{
-	int	i;
-	int	j;
-
-	i = -1;
-	while (++i < WIN_HEIGHT)
-	{
-		j = -1;
-		while (++j < WIN_WIDTH)
-			my_mlx_pixel_put(*infos, j, i, 0x000000);
-	}
 }

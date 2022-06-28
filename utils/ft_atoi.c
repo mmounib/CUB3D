@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oouazize <oouazize@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mmounib <mmounib@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 16:19:42 by oouazize          #+#    #+#             */
-/*   Updated: 2022/06/22 13:57:59 by oouazize         ###   ########.fr       */
+/*   Updated: 2022/06/28 12:22:25 by mmounib          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,10 @@ int ft_isascii(char *a)
 	i = 0;
 	while (a[i])
 	{
-		if (a[i] == '-' || a[i] == '+')
-			i++;
+		// if (a[i] == '-' || a[i] == '+')
+		// 	i++;
+		// if (a[i] == 32)
+		// 	i++;
 		if (!(a[i] >= 48 && a[i] <= 57))
 			return (1);
 		i++;
@@ -79,6 +81,21 @@ int ft_strchr(const char *str, int c)
 	if (c == '\0')
 		return (i);
 	return (-1);
+}
+
+int ft_strchr1(const char *str, int c)
+{
+	int i = 0;
+
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (1);
+		i++;
+	}
+	if (c == '\0')
+		return (1);
+	return (0);
 }
 
 int ft_strcmp(const char *str1, const char *str2)
